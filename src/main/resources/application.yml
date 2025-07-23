@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: umop-backend
+
+  datasource:
+    url: jdbc:mysql://localhost:3333/umop_db
+    username: root
+    password: umopdocker@123
+
+  jpa:
+    show-sql: true
+
+  security:
+    user:
+      name: heman
+      password: heman@123
+
+  main:
+    banner-mode: off
+
+logging:
+  level:
+    org:
+      springframework:
+        boot:
+          context:
+            config: error
+          docker: error
+      hibernate:
+        SQL: error
+    '[com.zaxxer.hikari]': error
